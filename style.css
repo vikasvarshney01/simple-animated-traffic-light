@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333;
+}
+
+.traffic-light {
+    width: 100px;
+    height: 300px;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #333;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease;
+}
+
+.red {
+    animation: redLight 2s infinite;
+}
+
+.yellow {
+    animation: yellowLight 2s infinite 2s;
+}
+
+.green {
+    animation: greenLight 2s infinite 4s;
+}
+
+@keyframes redLight {
+    0%, 33% {
+        background-color: red;
+    }
+    34%, 100% {
+        background-color: #333;
+    }
+}
+
+@keyframes yellowLight {
+    0%, 33% {
+        background-color: #333;
+    }
+    34%, 66% {
+        background-color: yellow;
+    }
+    67%, 100% {
+        background-color: #333;
+    }
+}
+
+@keyframes greenLight {
+    0%, 66% {
+        background-color: #333;
+    }
+    67%, 100% {
+        background-color: green;
+    }
+}
+.d1{
+    background-color: #000000;
+    border: 5px solid #14213d;
+    height:250px ;
+    width: 20px;
+    position: absolute;
+    left: 725px;
+    top: 532px;
+
+}
